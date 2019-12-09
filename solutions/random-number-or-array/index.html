@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Random Number or Array</title>
+</head>
+<body>
+  <h1>Random Number or Array</h1>
+  <p>Please, open your console</p>
+
+  <script>
+    function random_range(start_num, end_num) {
+      if(Array.isArray(start_num)) {        
+          const index = Math.round(Math.random() * (start_num.length - 1));
+          return start_num[index];
+      } else {
+          return Math.round(Math.random() * (end_num - start_num)  + start_num);
+      }
+    }
+
+    const my_array = ['red', 'blue', 'orange', 'yellow']
+
+    const random_number = random_range(5,10);
+    const random_array = random_range(my_array);
+    console.log(`Random number with a range: ${random_number}`);
+    console.log(`Random array element: ${random_array}`);
+  </script>
+</body>
+</html>
