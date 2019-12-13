@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Middle of String</title>
+</head>
+<body>
+    <h1>Middle of String</h1>
+    <p>Please open your console.</p>
+
+    <script>
+        function find_middle_letters(find_middle) {
+            if(find_middle.length%2 > 0) {
+                // odd
+                return find_middle.substr(find_middle.length / 2, 1);
+            } else {
+                // even
+                return find_middle.substr(find_middle.length / 2 -1, 2);
+            }
+        }
+
+        const odd_string = find_middle_letters('endgame'); // will get 'e'
+        const even_string = find_middle_letters('endgamer'); // will get 'ph'
+        console.log(`Here is the middle of the odd string, ${odd_string}`);
+        console.log(`Here are the middle two chars or the even string, ${even_string}`); 
+    </script>
+</body>
+</html>
