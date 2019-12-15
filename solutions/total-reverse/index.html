@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Total Reverse | AKA Array Reverser</title>
+</head>
+<body>
+    <h1>Total Reverse | AKA Array Reverser</h1>
+    <p>Please open your console</p>
+
+    <script>
+        let myArray = ['Fred', 'Daphne', 'Wilma', 'Shaggy', 'Scooby'];
+        function arrayReverse(arrayToReverse) {
+            const arrayLength = arrayToReverse.length;
+            let newArray= [];
+            for(let i = 0; i < arrayLength; i++) {
+                newArray.push(arrayToReverse.pop());
+            }
+            return newArray;
+        };
+        const output = arrayReverse(myArray);
+        console.log(output);
+    </script>
+</body>
+</html>
